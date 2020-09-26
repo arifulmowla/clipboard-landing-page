@@ -1,0 +1,297 @@
+$StrongCyan: hsl(171, 66%, 44%);
+$LightBlue: hsl(233, 100%, 69%);
+
+// ### Neutral
+
+$DarkGrayishBlue: hsl(210, 10%, 33%);
+$GrayishBlue: hsl(201, 11%, 66%);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url(/images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+  text-align: center;
+
+  .logo-img {
+    padding: 60px 0;
+    padding-top: 120px;
+  }
+
+  .hero-text h1 {
+    color: $DarkGrayishBlue;
+  }
+  .hero-text p {
+    color: $GrayishBlue;
+    line-height: 1.75;
+  }
+}
+
+//global css
+.inline-button {
+  margin: 30px 0;
+  .btn {
+    padding: 18px 30px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 1px 6px 12px $GrayishBlue;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba($color: #fff, $alpha: 0.8);
+  }
+  .btn-green {
+    background-color: $StrongCyan;
+  }
+  .btn-blue {
+    background-color: $LightBlue;
+  }
+}
+
+//end golbal css
+
+.feature {
+  text-align: center;
+  .feature-heading {
+    h2 {
+      font-size: 26px;
+      color: $DarkGrayishBlue;
+    }
+    p {
+      color: $GrayishBlue;
+      padding: 15px 0;
+    }
+  }
+
+  .feature-flex {
+    padding: 30px 0;
+    .feature-img {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .feature-cards {
+    padding: 30px 0;
+    .feature-card {
+      padding: 20px 0;
+      .card-content {
+        h3 {
+          font-size: 24px;
+          color: $DarkGrayishBlue;
+        }
+        p {
+          color: $GrayishBlue;
+          padding: 15px 0;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+// global class
+.heading {
+  padding: 30px 0;
+  text-align: center;
+  h2 {
+    font-size: 26px;
+    padding: 15px 0;
+    color: $DarkGrayishBlue;
+  }
+  p {
+    font-size: 18px;
+    color: $GrayishBlue;
+  }
+
+  img {
+    width: 100%;
+    padding: 60px 0;
+  }
+}
+
+.partner {
+  .partner-flex {
+    .partner-card {
+      padding: 30px 0;
+      .partner-card-content {
+        text-align: center;
+        img {
+          padding: 15px 0;
+        }
+        h3 {
+          color: $DarkGrayishBlue;
+          font-size: 24px;
+          padding: 15px 0;
+        }
+        p {
+          color: $GrayishBlue;
+        }
+      }
+    }
+  }
+}
+
+.partner-logo {
+  text-align: center;
+  .partner-logo-card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+}
+
+footer {
+  background-color: rgba($color: $GrayishBlue, $alpha: 0.1);
+  padding: 30px 0;
+  text-align: center;
+
+  .logo img {
+    width: 60px;
+    margin: 30px 0;
+  }
+
+  .link {
+    ul {
+      li {
+        list-style-type: none;
+        padding: 10px 0;
+        a {
+          text-decoration: none;
+          color: $GrayishBlue;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .social-btn {
+    padding-top: 30px;
+    img {
+      padding: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .feature .feature-flex .feature-img img {
+    position: absolute;
+    left: 0;
+    width: 50%;
+  }
+
+  p {
+    font-size: 18px;
+  }
+  .feature .feature-heading h2 {
+    font-size: 36px;
+  }
+  .feature .feature-cards .feature-card .card-content h3 {
+    font-size: 26px;
+  }
+  .heading h2 {
+    font-size: 36px;
+  }
+
+  header {
+    background-image: url(/images/bg-header-desktop.png);
+  }
+  .container {
+    width: 80%;
+  }
+  header .hero-text h1 {
+    font-size: 46px;
+  }
+  header .hero-text p {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 18px;
+    padding: 15px 0;
+  }
+
+  .inline-button .btn {
+    width: auto;
+    margin: 0 15px;
+  }
+
+  .feature {
+    padding: 60px 0;
+  }
+  .feature .feature-heading p {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .feature .feature-flex {
+    display: flex;
+    .feature-group {
+      width: 50%;
+    }
+    .feature-cards {
+      .feature-card {
+        .card-content {
+          text-align: left;
+          margin-left: 60px;
+        }
+      }
+    }
+  }
+
+  .heading {
+    p {
+      width: 60%;
+      margin: 0 auto;
+    }
+    img {
+      width: 60%;
+    }
+  }
+
+  .partner .partner-flex {
+    display: flex;
+
+    .partner-card {
+      padding: 30px;
+      width: 33%;
+    }
+  }
+  .partner-logo {
+    padding: 60px 0;
+  }
+
+  footer {
+    margin-top: 30px;
+  }
+  footer .footer-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .link ul li {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .feature .feature-flex .feature-img img {
+    position: inherit;
+    left: 0;
+    width: 100%;
+  }
+}
